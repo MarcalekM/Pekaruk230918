@@ -20,6 +20,11 @@ namespace Pekseg
             {
                 Console.WriteLine($"\t{p.Nev},\n\t{p.Zsir},\n\t{p.Szenhidrat}\n");
             }
+
+            var zs = pekaruk.OrderBy(zs => zs.Zsir);
+            Console.WriteLine($"A legkisebb zsírtartalmú pékáru:  {zs[0].Nev}");
+
+
         }
     }
 }

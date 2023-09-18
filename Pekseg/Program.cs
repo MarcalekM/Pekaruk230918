@@ -21,8 +21,29 @@ namespace Pekseg
                 Console.WriteLine($"\t{p.Nev},\n\t{p.Zsir},\n\t{p.Szenhidrat}\n");
             }
 
-            var zs = pekaruk.OrderBy(zs => zs.Zsir);
+            var zs = new List<Pekaru>(pekaruk.OrderBy(zs => zs.Zsir));
             Console.WriteLine($"A legkisebb zsírtartalmú pékáru:  {zs[0].Nev}");
+
+            var sz = new List<Pekaru>(pekaruk);
+            sz.Sort();
+            foreach (var p in sz)
+            {
+                Console.WriteLine($"\t{p.Nev},\n\t{p.Zsir},\n\t{p.Szenhidrat}");
+            }
+
+            var zst = false;
+            float count = 0;
+            foreach (var p in pekaruk)
+            {
+                if (p.Zsir == 0.7)
+                {
+                    Console.WriteLine(p.Nev);
+                    zst = true;
+                }
+                count += p.Zsir;
+            }
+            count /= pekaruk.Count();
+            if (!zst) Console.WriteLine($"Nincs ilyen elem. A pékáruk átlak zsírtartalma:  {count}");
 
 
         }

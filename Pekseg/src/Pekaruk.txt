@@ -1,0 +1,9 @@
+﻿Abonett; 2,3; 65,0
+Alföldi kenyér; 1,0; 53,0
+Bakonyi barna kenyér; 2,4; 46,0
+Briós; 10,4; 54,0
+Erzsébet kenyér; 1,0; 50,0
+Fánk; 10,6; 38,3
+Fehér kenyér; 3,6; 49,6
+Félbarna kenyér; 1,5; 49,0
+Francia kenyér; 1,8; 56,4
